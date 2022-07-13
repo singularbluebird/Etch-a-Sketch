@@ -8,4 +8,4 @@ for (i = 0; i < size; i++) {
    gridHolder.appendChild(divList[i]);
 }
 
-const grid = document.querySelector('.grid');
+const grids = document.querySelector('.grid');
