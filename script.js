@@ -8,4 +8,8 @@ for (i = 0; i < size; i++) {
    gridHolder.appendChild(divList[i]);
 }
 
-const grids = document.querySelector('.grid');
+const grids = document.querySelectorAll('.grid');
+
+grids.forEach((grid) => {
+     grid.style.flex = "1 1 content";
+});
