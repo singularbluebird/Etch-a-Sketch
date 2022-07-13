@@ -1,3 +1,11 @@
-.gridHolder {
+.gridHolder, body, html {
     display : flex;
+    flex-wrap: wrap;
+}
+
+
+
+body, .gridHolder, html {
+    min-height: 100%;
+    min-width: 100%;
 }
