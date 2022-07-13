@@ -1,4 +1,5 @@
 let size = 16 * 16;
+let minSize = (1/6) * 100;
 let divList = [];
 const gridHolder = document.querySelector('.gridHolder');
 
@@ -12,4 +13,6 @@ const grids = document.querySelectorAll('.grid');
 
 grids.forEach((grid) => {
      grid.style.flex = "1 1 content";
+     grid.style.cssText = `min-width: ${minSize}%;`;
+     grid.style.cssText = `min-height: ${minSize}%`;
 });
