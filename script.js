@@ -1,15 +1,15 @@
 let size = 16 * 16;
 let minSize = (1/16) * 100;
 let divList = [];
-const gridHolder = document.querySelector('.gridHolder');
+const gridHolder = document.querySelector(".gridHolder");
 
 for (i = 0; i < size; i++) {
-   divList[i] = document.createElement('div');
-   divList[i].classList.add('grid');
+   divList[i] = document.createElement("div");
+   divList[i].classList.add("grid");
    gridHolder.appendChild(divList[i]);
 }
 
-const grids = document.querySelectorAll('.grid');
+const grids = document.querySelectorAll(".grid");
 
 grids.forEach((grid) => {
      grid.style.flex = "1 1 content";
