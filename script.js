@@ -1,5 +1,5 @@
 let size = 16 * 16;
-let minSize = (1/6) * 100;
+let minSize = (1/16) * 100;
 let divList = [];
 const gridHolder = document.querySelector('.gridHolder');
 
