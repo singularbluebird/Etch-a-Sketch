@@ -17,4 +17,5 @@ body, html {
 .gridHolder {
     min-height: 40vw;
     min-width: 40vw;
+    border: 1px solid black;
 }
