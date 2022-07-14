@@ -4,8 +4,10 @@
 }
 
 body, html {
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    height: 900px;
 }
 
 .hovered {
