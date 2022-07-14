@@ -3,6 +3,11 @@
     flex-wrap: wrap;
 }
 
+body, html {
+    justify-content: center;
+    align-items: center;
+}
+
 .hovered {
     background-color: black;
 }
