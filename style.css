@@ -3,7 +3,9 @@
     flex-wrap: wrap;
 }
 
-
+.hovered {
+    background-color: black;
+}
 
 .gridHolder {
     min-height: 100vw;
