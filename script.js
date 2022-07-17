@@ -5,11 +5,15 @@ let divList = [];
 const gridHolder = document.querySelector(".gridHolder");
 const gridResolution = document.querySelector(".gridResolution");
 
-for (i = 0; i < size; i++) {
-   divList[i] = document.createElement("div");
-   divList[i].classList.add("grid");
-   gridHolder.appendChild(divList[i]);
+function makeGrid(size) {
+   for (i = 0; i < size; i++) {
+      divList[i] = document.createElement("div");
+      divList[i].classList.add("grid");
+      gridHolder.appendChild(divList[i]);
+   }
 }
+
+makeGrid(size);
 
 const grids = document.querySelectorAll(".grid");
 
@@ -37,3 +41,19 @@ function removeGrid() {
       gridHolder.removeChild(grid);
    });
 }
+
+gridResolution.addEventListener("click", () => {
+   removeGrid();
+   changeGrid(pickResolution());
+   makeGrid(size);
+
+   const grids = document.querySelectorAll(".grid");
+   
+   grids.forEach((grid) => {
+        grid.style.flex = "1 1 content";
+        grid.style.cssText = `min-width: ${minSize}%; border: 1px solid black;`;
+        grid.addEventListener("mouseover", () => {
+         grid.classList.add("hovered");
+        });
+   });
+})
