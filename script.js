@@ -15,7 +15,7 @@ function makeGrid(size) {
 
 makeGrid(size);
 
-const grids = document.querySelectorAll(".grid");
+let grids = document.querySelectorAll(".grid");
 
 grids.forEach((grid) => {
      grid.style.flex = "1 1 content";
@@ -47,7 +47,7 @@ gridResolution.addEventListener("click", () => {
    changeGrid(pickResolution());
    makeGrid(size);
 
-   const grids = document.querySelectorAll(".grid");
+   grids = document.querySelectorAll(".grid");
 
    grids.forEach((grid) => {
         grid.style.flex = "1 1 content";
