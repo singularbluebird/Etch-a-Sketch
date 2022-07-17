@@ -15,7 +15,7 @@ const grids = document.querySelectorAll(".grid");
 
 grids.forEach((grid) => {
      grid.style.flex = "1 1 content";
-     grid.style.cssText = `min-width :${minSize}%;`;
+     grid.style.cssText = `min-width: ${minSize}%; border: 1px solid black;`;
      grid.addEventListener("mouseover", () => {
       grid.classList.add("hovered");
      });
