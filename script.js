@@ -31,3 +31,9 @@ function changeGrid(num) {
    size = num**2;
    minSize = (1/num) * 100;
 }
+
+function removeGrid() {
+   grids.forEach((grid) => {
+      gridHolder.removeChild(grid);
+   });
+}
