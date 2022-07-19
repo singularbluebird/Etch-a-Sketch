@@ -10,9 +10,6 @@ body, html {
     height: 900px;
 }
 
-.hovered {
-    background-color: black;
-}
 
 .grid {
     box-sizing: border-box;
