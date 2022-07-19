@@ -28,6 +28,12 @@ grids.forEach((grid) => {
 function pickResolution() {
    let choice = prompt("How many squares would you like in your grid?");
    choice = parseInt(choice);
+   
+   if (choice > 100) {
+      choice = 0;
+      alert("Error, you can't choose a number higher than 100.");
+      return choice;
+   }
    return choice;
 }
 
