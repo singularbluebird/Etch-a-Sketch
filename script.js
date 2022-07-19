@@ -1,5 +1,10 @@
 let size;
 let minSize;
+
+let randomR;
+let randomG;
+let randomB;
+
 changeGrid(16);
 let divList = [];
 const gridHolder = document.querySelector(".gridHolder");
@@ -14,11 +19,28 @@ function makeGrid(size) {
 }
 
 function randomRGB() {
-   let randomR = Math.random() * 256;
-   let randomG = Math.random() * 256;
-   let randomB = Math.random() * 256;
+   randomR = Math.random() * 256;
+   randomG = Math.random() * 256;
+   randomB = Math.random() * 256;
 
-   return `rgb(${randomR}, ${randomG}, ${randomB})`;
+   return `rgb(${randomR},${randomG},${randomB})`;
+}
+
+function darkenRGB(rgb) {
+
+   let values = rgb.slice(4, -1);
+   let listRGB = values.split(",");
+
+   let R = parseFloat(listRGB[0]);
+   let G = parseFloat(listRGB[1]);
+   let B = parseFloat(listRGB[2]);
+
+   let not1R = 0.1 * R;
+   let not1G = 0.1 * G;
+   let not1B = 0.1 * B;
+
+   return `rgb(${R - not1R}, ${G - not1G}, ${B - not1B})`;
+
 }
 
 makeGrid(size);
@@ -29,11 +51,10 @@ grids.forEach((grid) => {
      grid.style.flex = "1 1 content";
      grid.style.cssText = `min-width: ${minSize}%; border: 1px solid black;`;
      grid.addEventListener("mouseover", () => {
-      grid.classList.add("hovered");
-      const hovered = document.querySelectorAll(".hovered");
-      hovered.style["background-color"] = randomRGB();
-     });
-});
+         grid.style["background-color"] = "rgb(0,0,0)";
+
+         });
+      });
 
 function pickResolution() {
    let choice = prompt("How many squares would you like in your grid?");
@@ -69,7 +90,7 @@ gridResolution.addEventListener("click", () => {
         grid.style.flex = "1 1 content";
         grid.style.cssText = `min-width: ${minSize}%; border: 1px solid black;`;
         grid.addEventListener("mouseover", () => {
-         grid.classList.add("hovered");
+         grid.style["background-color"] = "rgb(0,0,0)"
         });
    });
 });
