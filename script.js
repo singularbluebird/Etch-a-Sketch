@@ -13,6 +13,14 @@ function makeGrid(size) {
    }
 }
 
+function randomRGB() {
+   let randomR = Math.random() * 256;
+   let randomG = Math.random() * 256;
+   let randomB = Math.random() * 256;
+
+   return `rgb(${randomR}, ${randomG}, ${randomB})`;
+}
+
 makeGrid(size);
 
 let grids = document.querySelectorAll(".grid");
@@ -22,6 +30,8 @@ grids.forEach((grid) => {
      grid.style.cssText = `min-width: ${minSize}%; border: 1px solid black;`;
      grid.addEventListener("mouseover", () => {
       grid.classList.add("hovered");
+      const hovered = document.querySelectorAll(".hovered");
+      hovered.style["background-color"] = randomRGB();
      });
 });
 
